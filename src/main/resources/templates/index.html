@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eunbi Kim — Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="wrap">
+            <span class="name">Eunbi Kim</span>
+            <div class="links">
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+                <a class="resume" href="/resume.pdf" download>Résumé</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="wrap">
+            <h1>Eunbi Kim</h1>
+            <div class="role">Software Engineer · Backend &amp; Integration</div>
+            <p>Software engineer with 5 years at General Motors building enterprise integration and automation platforms. I work across API gateways, data pipelines, and reliability engineering — and recently designed and shipped a full-stack AI document assistant end to end.</p>
+            <div class="socials">
+                <a href="https://github.com/kimberly-smart" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/kimeunb" target="_blank">LinkedIn</a>
+                <a href="mailto:kimeunb1822@gmail.com">Email</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="projects">
+        <div class="wrap">
+            <div class="eyebrow">Projects</div>
+            <h2>Things I've built</h2>
+
+            <div class="card reveal">
+                <h3>CustodyAI Assistant</h3>
+                <div class="desc">A full-stack AI co-parenting assistant. Upload custody PDFs (with OCR for scanned docs), ask questions and get source-grounded answers, summarize documents, and rewrite emotional messages into calmer communication.</div>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Azure OpenAI</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">RAG</span>
+                </div>
+                <div class="actions">
+                    <a href="https://custody-ai-assistant.vercel.app" target="_blank">Live demo →</a>
+                    <a href="https://github.com/kimberly-smart/custody-ai-assistant" target="_blank">Code →</a>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <h3>This Portfolio Site</h3>
+                <div class="desc">Built and deployed from scratch with Spring Boot and Thymeleaf, containerized with Docker and shipped through a CI/CD pipeline — a small project to keep my full-stack and deployment workflow sharp.</div>
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Spring Boot</span>
+                    <span class="tag">Thymeleaf</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">CI/CD</span>
+                </div>
+                <div class="actions">
+                    <a href="https://github.com/kimberly-smart" target="_blank">Code →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="wrap">
+            <div class="eyebrow">Experience</div>
+            <h2>Where I've worked</h2>
+
+            <div class="exp reveal">
+                <div class="when">2021 — 2026</div>
+                <div class="what">
+                    <h3>Software Engineer</h3>
+                    <div class="co">General Motors · Atlanta, GA</div>
+                    <p>Built enterprise API and integration automation across APIM, MFT, and Layer7 — designing secure workflows, CI/CD pipelines, and monitoring systems. Worked across both the Automation and Site Reliability Engineering teams.</p>
+                </div>
+            </div>
+
+            <div class="skills">
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">Angular</span>
+                <span class="tag">Layer7 / APIM</span>
+                <span class="tag">Azure DevOps</span>
+                <span class="tag">CI/CD</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">SRE</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="wrap">
+            <div class="eyebrow">Contact</div>
+            <h2>Let's talk</h2>
+            <p>Open to backend, integration, and platform engineering roles. The fastest way to reach me is email.</p>
+            <div class="row">
+                <a href="mailto:kimeunb1822@gmail.com">kimeunb1822@gmail.com</a>
+                <a href="https://linkedin.com/in/kimeunb" target="_blank">LinkedIn</a>
+                <a href="https://github.com/kimberly-smart" target="_blank">GitHub</a>
+                <a href="/resume.pdf" download>Download résumé</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <p>© 2026 Eunbi Kim · Built with Spring Boot</p>
+        </div>
+    </footer>
+
+    <script>
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    </script>
+</body>
+</html>
